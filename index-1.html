@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#120d14">
+  <title>For Hannu — Happy Birthday ❤️</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;1,500;1,600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="ambient"></div>
+  <div class="stars" id="stars"></div>
+
+  <button class="music-btn" id="musicBtn" aria-label="Toggle music">♪</button>
+
+  <!-- INTRO -->
+  <section class="intro" id="intro">
+    <div class="intro-card">
+      <p class="mini">A LITTLE SOMETHING FOR YOU</p>
+      <p class="hand">Hey Hannu...</p>
+      <h1>Some people<br>become a <em>memory.</em><br>You became a story.</h1>
+      <p class="intro-copy">
+        A story that started when we were kids, changed a thousand times,
+        and somehow still has a very special place in my life.
+      </p>
+      <button class="main-btn" id="openBtn">Open this little surprise <span>→</span></button>
+      <p class="scroll-note">there's a lot to see ↓</p>
+    </div>
+  </section>
+
+  <main id="site" class="is-hidden">
+
+    <!-- BIRTHDAY -->
+    <section class="birthday">
+      <div class="birthday-inner reveal">
+        <p class="mini">TODAY IS ABOUT YOU</p>
+        <p class="hand">Happy Birthday, Hannu ✨</p>
+        <h2>Happy<br><em>Birthday.</em></h2>
+        <div class="cake" id="cake">🎂</div>
+        <p>
+          No matter how much life changes, some people remain important in a way
+          that doesn't really need a label. And you're one of those people for me.
+        </p>
+        <button class="ghost-btn" data-scroll="memories">Come, let's look back ↓</button>
+      </div>
+    </section>
+
+    <!-- OUR STORY -->
+    <section class="story section reveal">
+      <div class="section-head">
+        <p class="mini">01 / OUR STORY</p>
+        <h3>From childhood<br>to <em>everything after.</em></h3>
+      </div>
+
+      <div class="story-grid">
+        <div class="story-photo">
+          <img src="images/photo1.jpg" alt="A memory of us" loading="lazy">
+          <span>then & now</span>
+        </div>
+        <div class="story-text">
+          <p class="big-quote">“Funny how someone can grow up with you and still keep surprising you.”</p>
+          <p>
+            We've known each other for so long that there are probably versions of
+            us that neither of us remembers anymore. Childhood memories, stupid
+            jokes, fights, random conversations, growing up, changing as people...
+            we've somehow been part of each other's story through all of it.
+          </p>
+          <p>
+            We were more than just friends at one point, and even though life took
+            our relationship in a different direction, I never stopped valuing the
+            friendship and history we have.
+          </p>
+          <p class="hand small">And honestly... I'm glad our story didn't just end there. ❤️</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- MEMORIES -->
+    <section class="memories section reveal" id="memories">
+      <div class="section-head">
+        <p class="mini">02 / THE MEMORY WALL</p>
+        <h3>Proof that we have<br><em>way too many stories.</em></h3>
+        <p class="section-sub">Tap any photo. I picked these because they feel like us.</p>
+      </div>
+
+      <div class="gallery">
+        <button class="photo-card c1" data-photo="images/photo1.jpg" data-caption="One of those memories that still makes me smile.">
+          <img src="images/photo1.jpg" alt="Memory 1" loading="lazy"><span>01</span>
+        </button>
+        <button class="photo-card c2" data-photo="images/photo2.jpg" data-caption="The amount of nonsense in one frame is actually impressive. 😂">
+          <img src="images/photo2.jpg" alt="Memory 2" loading="lazy"><span>02</span>
+        </button>
+        <button class="photo-card c3" data-photo="images/photo3.jpg" data-caption="Some pictures don't need an explanation.">
+          <img src="images/photo3.jpg" alt="Memory 3" loading="lazy"><span>03</span>
+        </button>
+        <button class="photo-card c4" data-photo="images/photo4.jpg" data-caption="A little chaotic, a little cute, completely us.">
+          <img src="images/photo4.jpg" alt="Memory 4" loading="lazy"><span>04</span>
+        </button>
+        <button class="photo-card c5" data-photo="images/photo5.jpg" data-caption="This one deserves its own frame.">
+          <img src="images/photo5.jpg" alt="Memory 5" loading="lazy"><span>05</span>
+        </button>
+        <button class="photo-card c6" data-photo="images/photo6.jpg" data-caption="And somehow we always end up laughing.">
+          <img src="images/photo6.jpg" alt="Memory 6" loading="lazy"><span>06</span>
+        </button>
+        <button class="photo-card c7" data-photo="images/photo7.jpg" data-caption="A memory I'd happily keep forever.">
+          <img src="images/photo7.jpg" alt="Memory 7" loading="lazy"><span>07</span>
+        </button>
+        <button class="photo-card c8" data-photo="images/photo8.jpg" data-caption="To all the memories we haven't made yet.">
+          <img src="images/photo8.jpg" alt="Memory 8" loading="lazy"><span>08</span>
+        </button>
+      </div>
+    </section>
+
+    <!-- LIGHTBOX -->
+    <div class="lightbox" id="lightbox" aria-hidden="true">
+      <button class="close-lightbox" id="closeLightbox">×</button>
+      <img id="lightboxImg" src="" alt="Selected memory">
+      <p id="lightboxCaption"></p>
+    </div>
+
+    <!-- WHY SPECIAL -->
+    <section class="reasons section reveal">
+      <div class="section-head center">
+        <p class="mini">03 / JUST A REMINDER</p>
+        <h3>Things that make<br>you <em>Hannu.</em></h3>
+      </div>
+
+      <div class="reason-grid">
+        <article>
+          <b>THE HISTORY</b>
+          <span>01</span>
+          <p>Not everyone gets to say they've known someone since childhood. I'm lucky I can.</p>
+        </article>
+        <article>
+          <b>THE FRIENDSHIP</b>
+          <span>02</span>
+          <p>Even after everything changed, the comfort of talking to you somehow stayed.</p>
+        </article>
+        <article>
+          <b>THE CHAOS</b>
+          <span>03</span>
+          <p>Our conversations can go from sensible to absolutely ridiculous in seconds.</p>
+        </article>
+        <article>
+          <b>THE PERSON</b>
+          <span>04</span>
+          <p>Beyond every label, you're simply someone I genuinely want to see happy.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- LETTER -->
+    <section class="letter-section reveal">
+      <div class="letter">
+        <div class="letter-top"><span>FOR HANNU</span><span>♥</span></div>
+        <p class="hand letter-hand">A little letter...</p>
+        <h3>For the girl who<br>has been part of my life<br>for <em>so long.</em></h3>
+
+        <p>
+          Hannu, I don't think I've ever properly put into words what our friendship
+          means to me.
+        </p>
+
+        <p>
+          We started as two kids who probably had no idea how many chapters were
+          waiting ahead of us. Then came growing up, becoming different people,
+          getting closer, falling apart in some ways, finding our way back as friends,
+          and collecting a ridiculous number of memories in between.
+        </p>
+
+        <p>
+          You were my girlfriend once, but I don't want this message to only remember
+          that part of us. You're also my childhood friend, my best friend, and someone
+          whose presence has been woven into my life for years. That's something I will
+          always respect and be grateful for.
+        </p>
+
+        <p>
+          On your birthday, I just want you to know that I genuinely hope life is kind
+          to you. I hope you get the things you work for. I hope you meet people who
+          appreciate your heart. I hope you laugh a lot, travel, grow, make mistakes,
+          learn, win, lose, and still keep that little bit of you that makes you
+          <em>you.</em>
+        </p>
+
+        <p>
+          And selfishly, I hope we keep making stupid memories too — because some
+          friendships are too old, too real and too special to ever feel ordinary.
+        </p>
+
+        <div class="signature">
+          <p>Happy Birthday, Hannu. ❤️</p>
+          <strong>— from someone who's known you for way too long</strong>
+        </div>
+      </div>
+    </section>
+
+    <!-- GIFT -->
+    <section class="gift-section reveal">
+      <p class="mini">04 / ONE LAST SURPRISE</p>
+      <h3>Okay... I saved<br>one thing <em>for last.</em></h3>
+      <p>Tap the gift. Don't overthink it. 🎁</p>
+
+      <button class="gift" id="gift" aria-label="Open birthday gift">
+        <span class="gift-bow">🎀</span>
+        <span class="gift-lid"></span>
+        <span class="gift-box"></span>
+        <span class="gift-ribbon"></span>
+        <span class="gift-tap">tap me</span>
+      </button>
+
+      <div class="secret hidden" id="secret">
+        <div class="secret-card">
+          <span>✦</span>
+          <h4>Here's to us.</h4>
+          <p>
+            To the childhood memories, the old stories, the new chapters,
+            the friendship that survived everything — and all the laughs
+            that are still waiting for us.
+          </p>
+          <strong>Happy Birthday, Hannu 🫶</strong>
+        </div>
+      </div>
+    </section>
+
+    <!-- FINAL -->
+    <section class="final reveal">
+      <p class="mini">THE END — FOR NOW</p>
+      <h2>Keep smiling,<br><em>Hannu.</em></h2>
+      <p class="final-copy">Some people are chapters. Some become part of the whole story.</p>
+      <div class="heart">♥</div>
+      <p class="tiny">Made with memories, a little stupidity, and a lot of love.</p>
+      <button class="ghost-btn" id="replay">↻ Start again</button>
+    </section>
+
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
